@@ -5,20 +5,14 @@ from urllib.parse import urlparse
 
 
 def shorten_link(token, url):
-    try:
-        response = requests.get(url)
-    except:
-        print('Wrong URL!')
-        return None
-
     headers = {
         'Authorization': token
     }
-    json_values = {
+    link_settings = {
         "long_url": url
     }
     url = 'https://api-ssl.bitly.com/v4/bitlinks'
-    response = requests.post(url, headers=headers, json=json_values)
+    response = requests.post(url, headers=headers, json=link_settings)
     response.raise_for_status()
     bitlink = response.json()['id']
     return bitlink
