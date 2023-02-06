@@ -17,7 +17,7 @@ Location for token is  .env
 
 .env example:
 ```
-BITLY_TOKEN = 'd8c8a967a1f2256b691986u8021d26cd1347dfec'
+BITLY_TOKEN='d8c8a967a1f2256b691986u8021d26cd1347dfec'
 ```
  
  To get token sign up [bitly.com](https://bitly.com) . Go Profile->API->Access token
